@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: #bf6f13;
+  --secondary-color: #e88e27;
+  --blackC: #1d1d1d;
+  --green: #6ac045;
+}
+body {
+  background-color: var(--blackC) !important;
+}
+.header {
+  background-color: var(--secondary-color);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* cursor: pointer; */
+}
+.movie {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  background-color: var(--green);
+  margin: 1rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.movie .poster {
+  width: 100%;
+  height: 250px;
+}
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie-details .boxm {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.movie-details .title {
+  width: 160px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.movie-details .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  background-color: var(--secondary-color);
+  opacity: 0.9;
+  color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+}
+.movie-details:hover .overview {
+  transform: translateY(0%);
+}
+.buutonLink {
+  background-color: var(--primary-color);
+  width: 100px;
+  height: 50px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #1d1d1d;
+
+  text-decoration: none;
+}
+
+.box {
+  background: #1b2631;
+  width: 100%;
+  margin-top: -3px;
+}
+
+.box .inner {
+  padding: 28px 50px 25px 50px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    background-color: var(--secondary-color);
+    height: 180px;
+  }
+}
+.notfound {
+  font-size: 40px;
+  font-weight: bold;
+}
