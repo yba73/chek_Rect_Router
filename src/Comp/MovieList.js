@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MovieCard from "./MovieCard";
 import Add from "./Add";
 import "./MovieList";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Information from "./Information";
 
 const MovieList = (props) => {
@@ -110,7 +110,7 @@ const MovieList = (props) => {
               element={<Information movie={movieList} />}
             />
 
-            <Route path="/*" element={<Navigate to="/" />} />
+            {/* <Route path="*" element={<Navigate to="/" />} /> */}
           </Routes>
         </div>
       </div>
